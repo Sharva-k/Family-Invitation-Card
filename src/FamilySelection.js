@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Card} from 'react-bootstrap';
-import { FaUsers, FaHeart } from 'react-icons/fa';
+import React, { useState } from "react";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { FaUsers, FaHeart } from "react-icons/fa";
 
 const FamilySelection = ({ onFamilySelect }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
@@ -11,31 +11,38 @@ const FamilySelection = ({ onFamilySelect }) => {
     { name: "The Akshay deshpande Family", color: "success", emoji: "🌿" },
     { name: "The Ajinkya panse Family", color: "secondary", emoji: "🌺" },
     { name: "The Aditi Deshpande Family", color: "warning", emoji: "🌞" },
-    { name: "The KK kaka Family", color: "info", emoji: "🦋" }
+    { name: "The KK kaka Family", color: "info", emoji: "🦋" },
   ];
 
   const cardStyle = (index) => ({
-    cursor: 'pointer',
-    transform: hoveredCard === index ? 'scale(1.05)' : 'scale(1)',
-    transition: 'all 0.3s ease',
-    height: '200px'
+    cursor: "pointer",
+    transform: hoveredCard === index ? "scale(1.05)" : "scale(1)",
+    transition: "all 0.3s ease",
+    height: "200px",
   });
 
   return (
-    <div className="min-vh-100" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
+    <div
+      className="min-vh-100"
+      style={{
+        background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      }}
+    >
       <Container className="py-5">
         {/* Header */}
         <div className="text-center text-white mb-5 pt-4">
           <h1 className="display-4 fw-bold mb-3">Family Festival 2024</h1>
-          <p className="lead mb-2">Welcome to our Grand Celebration!</p>
-          <p className="fs-5">Please select your family to view your personalized invitation</p>
+          <p className="lead mb-2">Welcome!</p>
+          <p className="fs-5">
+            Please select your family to view your personalized invitation
+          </p>
         </div>
 
         {/* Family Cards Grid */}
         <Row className="g-4">
           {families.map((family, index) => (
             <Col md={6} lg={4} key={index}>
-              <Card 
+              <Card
                 className={`h-100 shadow-lg border-${family.color} border-2`}
                 style={cardStyle(index)}
                 onMouseEnter={() => setHoveredCard(index)}
@@ -49,7 +56,10 @@ const FamilySelection = ({ onFamilySelect }) => {
                     <FaUsers className="me-2" />
                     <small>Click to view invitation</small>
                   </div>
-                  <div className={`w-100 bg-${family.color} rounded`} style={{height: '3px'}}></div>
+                  <div
+                    className={`w-100 bg-${family.color} rounded`}
+                    style={{ height: "3px" }}
+                  ></div>
                 </Card.Body>
               </Card>
             </Col>
