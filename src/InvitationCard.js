@@ -55,7 +55,7 @@ const InvitationCard = ({ familyName, onBack }) => {
                       </div>
                       <div>
                         <strong>Date</strong>
-                        <div className="text-muted">Sunday , Monday and Tuesday :- 31 , 1 and 2 of September.</div>
+                        <div className="text-muted">Sunday , Monday and Tuesday :- 31 August , 1 and 2 of September.</div>
                       </div>
                     </div>
                   </div>
