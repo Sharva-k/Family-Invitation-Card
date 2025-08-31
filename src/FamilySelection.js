@@ -6,10 +6,10 @@ const FamilySelection = ({ onFamilySelect }) => {
   const [hoveredCard, setHoveredCard] = useState(null);
 
   const families = [
-    { name: "The Deshpande Family", color: "danger", emoji: "🌸" },
+    { name: "The Deepali Deshpande Family", color: "danger", emoji: "🌸" },
     { name: "The Deepak Kurhekar Family", color: "primary", emoji: "🌊" },
-    { name: "The Akshay deshpande Family", color: "success", emoji: "🌿" },
-    { name: "The Ajinkya panse Family", color: "secondary", emoji: "🌺" },
+    { name: "The Akshay Deshpande Family", color: "success", emoji: "🌿" },
+    { name: "The Ajinkya Panse Family", color: "secondary", emoji: "🌺" },
     { name: "The Aditi Deshpande Family", color: "warning", emoji: "🌞" },
     { name: "The KK kaka Family", color: "info", emoji: "🦋" },
   ];
@@ -31,13 +31,13 @@ const FamilySelection = ({ onFamilySelect }) => {
       <Container className="py-5">
         {/* Header */}
         <div className="text-center text-white mb-5 pt-4">
-          <h1 className="display-4 fw-bold mb-3">Family Festival 2024</h1>
+          <h1 className="display-4 fw-bold mb-3">Ganpati Mahalakshmi 2025</h1>
           <p className="lead mb-2">Welcome!</p>
           <p className="fs-5">
             Please select your family to view your personalized invitation
           </p>
         </div>
-
+ 
         {/* Family Cards Grid */}
         <Row className="g-4">
           {families.map((family, index) => (
@@ -70,7 +70,7 @@ const FamilySelection = ({ onFamilySelect }) => {
         <div className="text-center mt-5 text-white">
           <div className="d-flex justify-content-center align-items-center">
             <FaHeart className="text-danger me-2" />
-            <span>Hello This is sample footer</span>
+            <span>We welcome you!</span>
             <FaHeart className="text-danger ms-2" />
           </div>
         </div>
